@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tamara Kamali — Social Media Manager & Virtual Assistant</title>
+<meta name="description" content="Tamara Kamali — Social Media Manager, Virtual Assistant & Content Creator. Organic growth specialist, 70K to 560K followers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f2ea;
+    --bg-alt:#f0e7dc;
+    --panel:#f3ebdf;
+    --purple:#2d1b4f;
+    --purple-deep:#1b1230;
+    --purple-soft:#4f3d70;
+    --gold:#c99a46;
+    --gold-bright:#d9b15d;
+    --text:#201334;
+    --text-dim:#54476a;
+    --rule:rgba(45,27,79,0.18);
+    --max:1120px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:
+      radial-gradient(circle at 1px 1px, rgba(45,27,79,0.08) 1px, transparent 0) 0 0/4px 4px,
+      linear-gradient(180deg, #f9f5ef 0%, var(--bg) 100%);
+    color:var(--text);
+    font-family:'Work Sans', sans-serif;
+    font-weight:300;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .pull-quote{
+    padding:60px 0 20px;
+    border-top:1px solid var(--rule);
+  }
+  .pull-quote p{
+    font-family:'Fraunces', serif; font-style:italic; font-weight:400;
+    font-size:clamp(24px,3.4vw,34px); color:var(--purple);
+    max-width:16ch; line-height:1.3;
+  }
+  .pull-quote p::before{content:'"';}
+  .pull-quote p::after{content:'"';}
+  .pull-quote span{display:block; margin-top:16px; font-family:'Work Sans'; font-style:normal; font-size:13px; color:var(--text-dim);}
+  h1,h2,h3,.display{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    line-height:1.1;
+    letter-spacing:-0.01em;
+  }
+  em{font-style:italic; color:var(--purple);}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  section{padding:110px 0;}
+  @media(max-width:700px){ section{padding:70px 0;} }
+
+  .eyebrow{
+    font-size:13px;
+    letter-spacing:.04em;
+    color:var(--gold);
+    font-style:italic;
+    font-family:'Fraunces', serif;
+    margin-bottom:14px;
+  }
+
+  /* NAV */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    background:rgba(247,242,234,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rule);
+  }
+  nav.wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:74px;
+  }
+  .logo{font-family:'Fraunces', serif; font-size:19px; letter-spacing:.02em; color:var(--purple-deep);}
+  .navlinks{display:flex; gap:32px; font-size:14px; color:var(--text-dim);}
+  .navlinks a{position:relative; padding:4px 0; transition:color .2s;}
+  .navlinks a:hover{color:var(--purple-deep);}
+  .navlinks a::after{
+    content:''; position:absolute; left:0; bottom:0; width:0; height:1px;
+    background:var(--gold); transition:width .25s ease;
+  }
+  .navlinks a:hover::after{width:100%;}
+  .navsocial{display:flex; gap:18px; align-items:center;}
+  .navsocial a{font-size:13px; color:var(--text-dim);}
+  .navsocial a:hover{color:var(--purple-deep);}
+  .hirebtn{
+    border:1px solid var(--gold); padding:9px 20px; font-size:13px;
+    border-radius:2px; color:var(--purple-deep);
+    transition:background .2s, color .2s, border-color .2s;
+  }
+  .hirebtn:hover{background:var(--gold); color:var(--purple-deep); border-color:var(--gold);}
+  .navtoggle{display:none;}
+  @media(max-width:860px){
+    .navlinks, .navsocial{display:none;}
+    .navtoggle{display:block; font-size:22px; cursor:pointer; background:none; border:none; color:var(--purple-deep);}
+  }
+
+  /* HERO */
+  .hero{
+    padding-top:180px; padding-bottom:100px;
+    display:grid; grid-template-columns:1.3fr 0.9fr; gap:60px; align-items:end;
+    opacity:0; transform:translateY(14px);
+    animation:rise .8s ease forwards .15s;
+  }
+  @keyframes rise{ to{opacity:1; transform:translateY(0);} }
+  @media(max-width:860px){ .hero{grid-template-columns:1fr; padding-top:140px;} }
+
+  .hero h1{font-size:clamp(42px,7vw,74px); font-weight:400; color:var(--purple-deep);}
+  .hero-role{
+    font-family:'Work Sans'; font-weight:500; font-size:15px;
+    color:var(--text-dim); margin:22px 0 26px;
+    letter-spacing:.02em;
+  }
+  .hero-role span{color:var(--gold);}
+  .hero p.lede{font-size:17px; color:var(--text-dim); max-width:52ch; margin-bottom:36px;}
+  .cta-row{display:flex; gap:16px; flex-wrap:wrap;}
+  .btn{
+    padding:13px 26px; font-size:14px; border-radius:2px;
+    transition:all .2s ease; display:inline-block;
+  }
+  .btn-solid{background:var(--purple); color:var(--bg);}
+  .btn-solid:hover{background:var(--purple-deep);}
+  .btn-outline{border:1px solid var(--rule); color:var(--purple-deep); background:rgba(255,255,255,0.12);}
+  .btn-outline:hover{border-color:var(--gold); color:var(--purple-deep);}
+
+  .hero-stat{
+    border-left:1px solid var(--rule);
+    padding-left:32px;
+  }
+  .hero-stat .big{
+    font-family:'Fraunces', serif; font-size:clamp(40px,5vw,58px);
+    color:var(--gold-bright); line-height:1;
+  }
+  .hero-stat .cap{font-size:13px; color:var(--text-dim); margin-top:10px;}
+  .stat-grid{display:flex; gap:36px; margin-top:34px; flex-wrap:wrap;}
+  .stat-grid div{font-size:13px; color:var(--text-dim);}
+  .stat-grid strong{display:block; font-family:'Fraunces', serif; font-size:20px; color:var(--purple-deep); font-weight:400;}
+
+  /* SECTION HEADS */
+  .sec-head{margin-bottom:54px; max-width:640px;}
+  .sec-head h2{font-size:clamp(28px,4vw,40px); color:var(--purple-deep);}
+
+  /* ABOUT */
+  .about-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:70px;}
+  @media(max-width:860px){ .about-grid{grid-template-columns:1fr; gap:40px;} }
+  .about-grid p{color:var(--text-dim); margin-bottom:18px; font-size:16px;}
+  .about-facts{border-top:1px solid var(--rule);}
+  .fact{
+    display:flex; justify-content:space-between; padding:18px 0;
+    border-bottom:1px solid var(--rule); font-size:14px;
+  }
+  .fact span:first-child{color:var(--text-dim);}
+  .fact span:last-child{text-align:right; max-width:60%; color:var(--purple-deep);}
+  .cvlink{display:inline-block; margin-top:26px; font-size:14px; color:var(--purple); border-bottom:1px solid var(--purple); padding-bottom:2px;}
+
+  /* SKILLS — editorial index, not card grid */
+  .skill-row{
+    display:grid; grid-template-columns:280px 1fr; gap:36px;
+    padding:28px 0; border-top:1px solid var(--rule);
+  }
+  .skill-row:last-child{border-bottom:1px solid var(--rule);}
+  @media(max-width:700px){ .skill-row{grid-template-columns:1fr; gap:10px;} }
+  .skill-cat h3{font-size:20px; color:var(--purple); font-weight:400;}
+  .skill-cat .note{font-size:12.5px; color:var(--text-dim); margin-top:6px; font-style:italic;}
+  .skill-list{font-size:15px; color:var(--text-dim); line-height:2;}
+  .skill-list b{color:var(--purple-deep); font-weight:500;}
+
+  /* SERVICES — asymmetric list, not a uniform card grid */
+  .service-row{
+    display:grid; grid-template-columns:1fr 1.6fr; gap:36px;
+    padding:30px 0; border-top:1px solid var(--rule);
+  }
+  .service-row:last-child{border-bottom:1px solid var(--rule);}
+  .service-row:nth-child(even){grid-template-columns:1.6fr 1fr;}
+  .service-row:nth-child(even) .service-body{order:-1;}
+  @media(max-width:700px){
+    .service-row, .service-row:nth-child(even){grid-template-columns:1fr; gap:10px;}
+    .service-row:nth-child(even) .service-body{order:0;}
+  }
+  .service-name h3{font-size:22px; font-weight:400; color:var(--purple);}
+  .service-body p{font-size:14.5px; color:var(--text-dim); max-width:52ch;}
+  .service-body .tag{font-size:11.5px; color:var(--gold); font-style:italic; font-family:'Fraunces', serif; margin-bottom:8px; display:block;}
+
+  /* PORTFOLIO */
+  .work-grid{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--rule); border:1px solid var(--rule);}
+  @media(max-width:860px){ .work-grid{grid-template-columns:1fr;} }
+  .work-card{background:var(--bg); padding:34px; display:flex; flex-direction:column; justify-content:space-between; min-height:220px;}
+  .work-card h3{font-size:23px; font-weight:400; margin-bottom:8px; color:var(--purple-deep);}
+  .work-tag{font-size:12px; color:var(--gold); letter-spacing:.03em; margin-bottom:14px;}
+  .work-card p{font-size:14.5px; color:var(--text-dim); margin-bottom:20px;}
+  .work-link{font-size:13.5px; color:var(--purple); border-bottom:1px solid transparent;}
+  .work-link:hover{border-color:var(--purple);}
+
+  /* EXPERIENCE — legitimate timeline */
+  .timeline{border-left:1px solid var(--rule); margin-left:6px;}
+  .tl-item{position:relative; padding:0 0 46px 34px;}
+  .tl-item::before{
+    content:''; position:absolute; left:-5.5px; top:5px;
+    width:10px; height:10px; border-radius:50%;
+    background:var(--gold); box-shadow:0 0 0 4px var(--bg);
+  }
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-date{font-size:12.5px; color:var(--gold); margin-bottom:6px;}
+  .tl-item h3{font-size:20px; font-weight:400; margin-bottom:8px; color:var(--purple-deep);}
+  .tl-item p{font-size:14.5px; color:var(--text-dim); max-width:60ch; margin-bottom:12px;}
+  .tl-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .tl-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition: filter 0.2s, opacity 0.2s;
+  }
+  .tl-item:hover .tl-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+  @media (max-width: 700px) {
+    .tl-body { flex-direction: column; align-items: flex-start; }
+    .tl-logo { width: 60px; height: 60px; }
+  }
+  .story-list{list-style:none; display:grid; gap:8px; margin-top:10px;}
+  .story-list li{position:relative; padding-left:18px; font-size:14.5px; color:var(--text-dim); line-height:1.7;}
+  .story-list li::before{
+    content:'•'; position:absolute; left:0; top:0; color:var(--gold); font-size:18px; line-height:1.2;
+  }
+
+  /* CERTS */
+  .cert-list{border-top:1px solid var(--rule);}
+  .cert-row{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding:20px 0; border-bottom:1px solid var(--rule);
+    font-size:15px; color:var(--purple-deep);
+  }
+  .cert-row span:last-child{color:var(--text-dim); font-size:13.5px;}
+
+  /* TESTIMONIALS */
+  .testi-empty{
+    border:1px dashed var(--rule); padding:44px; text-align:center;
+    color:var(--text-dim); font-size:14.5px; font-style:italic;
+  }
+
+  /* CONTACT */
+  .contact-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:70px;}
+  @media(max-width:860px){ .contact-grid{grid-template-columns:1fr; gap:44px;} }
+  .contact-copy h2{font-size:clamp(30px,4vw,44px); color:var(--purple-deep); margin-bottom:12px;}
+  .contact-copy .availability{font-size:18px; color:var(--purple); margin-bottom:14px;}
+  .contact-copy .lede{font-size:15px; color:var(--text-dim); max-width:46ch; margin-bottom:28px;}
+  .contact-info a{display:block; font-size:16px; margin-bottom:14px; color:var(--text-dim);}
+  .contact-info a:hover{color:var(--purple);}
+
+  .achievements{margin-top:40px; padding-top:28px; border-top:1px solid var(--rule);}
+  .achievements h3{font-size:24px; color:var(--purple-deep); margin-bottom:18px;}
+  .achievement-list{list-style:none; display:grid; gap:10px;}
+  .achievement-list li{position:relative; padding-left:18px; font-size:14px; color:var(--text-dim); font-weight:700; line-height:1.6;}
+  .achievement-list li::before{content:'•'; position:absolute; left:0; top:0; color:var(--gold); font-size:18px; line-height:1.4; font-weight:900;}
+  .achievement-list a{color:var(--purple); border-bottom:1px solid var(--rule);}
+  .achievement-list a:hover{color:var(--gold); border-color:var(--gold);}
+  .project-link{display:inline-flex; align-items:center; gap:10px; font-weight:700;}
+  .project-link img{display:block; width:28px; height:28px; object-fit:contain; border-radius:4px; background:#fff; padding:2px; box-sizing:border-box;}
+  .project-link span{display:inline-flex; align-items:center;}
+
+  form{display:flex; flex-direction:column; gap:18px;}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  @media(max-width:600px){ .form-row{grid-template-columns:1fr;} }
+  input, textarea{
+    background:transparent; border:none; border-bottom:1px solid var(--rule);
+    color:var(--text); font-family:'Work Sans'; font-size:14.5px; padding:10px 2px;
+    outline:none; transition:border-color .2s;
+  }
+  input::placeholder, textarea::placeholder{color:var(--text-dim);}
+  input:focus, textarea:focus{border-color:var(--gold);}
+  textarea{resize:vertical; min-height:100px;}
+  button[type=submit]{
+    align-self:flex-start; background:var(--gold); color:var(--purple-deep);
+    border:none; padding:13px 30px; font-size:14px; border-radius:2px;
+    cursor:pointer; transition:background .2s; margin-top:8px;
+  }
+  button[type=submit]:hover{background:var(--gold-bright);}
+
+  footer{border-top:1px solid var(--rule); padding:50px 0 34px;}
+  .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px;}
+  .foot-grid h4{font-size:12.5px; color:var(--gold); margin-bottom:14px; font-style:italic; font-family:'Fraunces', serif;}
+  .foot-grid a{display:block; font-size:13.5px; color:var(--text-dim); margin-bottom:8px;}
+  .foot-grid a:hover{color:var(--purple-deep);}
+  .foot-bottom{margin-top:40px; padding-top:24px; border-top:1px solid var(--rule); font-size:12.5px; color:var(--text-dim); text-align:center;}
+
+  ::selection{background:var(--gold); color:var(--purple-deep);}
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--gold-bright); outline-offset:2px;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero{animation:none; opacity:1; transform:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#home" class="logo">Tamara Kamali</a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="navsocial">
+      <a href="#contact" class="hirebtn">Hire Me</a>
+    </div>
+  </nav>
+</header>
+
+<main id="home">
+  <div class="wrap hero">
+    <div>
+      <h1>Tamara <em>Kamali</em><br>Waithera</h1>
+      <div class="hero-role">Social Media Manager <span>/</span> Virtual Assistant <span>/</span> Content Creator <span>/</span> Admin &amp; Data Support</div>
+      <p class="lede">I help businesses grow real audiences and run smoother behind the scenes — from organic social strategy that's taken a page from 70K to 560K followers, to the day-to-day admin and content work that keeps a brand consistent.</p>
+      <div class="cta-row">
+        <a href="#experience" class="btn btn-solid">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Hire Me</a>
+      </div>
+      <div class="stat-grid">
+        <div><strong>560K+</strong>Followers grown</div>
+        <div><strong>100%</strong>Organic strategy</div>
+        <div><strong>4+</strong>ALX certifications</div>
+      </div>
+    </div>
+    <div class="hero-stat">
+      <div class="big">70K → 560K</div>
+      <div class="cap">Organic Facebook growth, no ad spend</div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <h2 style="font-size:34px; margin-bottom:22px;">The person behind the <em>strategy</em></h2>
+        <p>I'm a Social Media Manager and Virtual Assistant who turns quiet pages into loud, engaged communities — without paid ads.</p>
+        <p>I have a track record of driving real audience growth for lifestyle and travel brands. My biggest win so far: growing a client's Facebook page from around 70,000 to 560,000 followers through consistent, platform-tailored content strategy, no ad spend involved.</p>
+        <p>I'm currently completing a Diploma in Computing and Informatics at Kiambu National Polytechnic, which gives me a technical grounding to go with the hands-on digital marketing work I do day to day. I'm adaptable, detail-oriented, and genuinely good at producing content that sounds like a real person, not a brand template.</p>
+        <a href="Tamara_Kamali_CV.html" class="cvlink" download>Download CV</a>
+      </div>
+      <div class="about-facts">
+        <div class="fact"><span>Currently studying</span><span>Diploma in Computing &amp; Informatics</span></div>
+        <div class="fact"><span>Specialty</span><span>Organic social growth</span></div>
+        <div class="fact"><span>Also building</span><span>Frontend web development</span></div>
+        <div class="fact"><span>Availability</span><span>Open to remote work</span></div>
+      </div>
+    </div>
+    <div class="wrap pull-quote">
+      <p>I don't do content that sounds like everyone else's brand page.</p>
+      <span class="pq-cap">on why the 70K–560K growth didn't need a single ad</span>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Skills &amp; <em>toolkit</em></h2>
+        <p style="color:var(--text-dim); margin-top:14px; font-size:15px;">Built through client work, ALX training, self-directed projects, and constant hands-on learning.</p>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-cat">
+          <h3>Social media &amp; growth</h3>
+          <div class="note">Strongest, evidence-backed</div>
+        </div>
+        <div class="skill-list">Social Media Management, Social Media Strategy, Content Planning, Content Creation, Content Scheduling, Social Media Copywriting, Caption Writing, Hashtag Strategy, Audience Targeting, Engagement Strategy, Short-Form Video Content, TikTok Management, Instagram Management, Facebook Management, YouTube Shorts, Social Media Growth Strategy, Viral Content Strategy, Social Media Analytics, Audience &amp; Performance Analysis, Brand Content Strategy, Cross-Platform Content Adaptation, Social Media Marketing</div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-cat">
+          <h3>Virtual &amp; executive assistance</h3>
+          <div class="note">ALX-certified, client-tested</div>
+        </div>
+        <div class="skill-list">Virtual Assistance, Executive Assistance, Email Management, Calendar Management, Scheduling, Administrative Support, Data Entry, Online Research, Document Management, Organization, Task Management, Customer Support, Remote Collaboration, Time Management, Attention to Detail, Following Instructions</div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-cat">
+          <h3>Design &amp; content</h3>
+          <div class="note">CDACC-certified</div>
+        </div>
+        <div class="skill-list">Canva, Graphic Design, Typography, Color Theory, Layout &amp; Composition, Visual Hierarchy, Brand Identity Design, Logo Design, Print Design, Social Media Graphics, Promotional Posters, Branding, Visual Content Creation, Content Ideation, Video Content Creation, Basic Video Editing, Creative Direction, Copywriting, Storytelling, Visual Communication</div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-cat">
+          <h3>Data &amp; AI-assisted work</h3>
+          <div class="note">ALX-certified</div>
+        </div>
+        <div class="skill-list">Data Analytics, Data Annotation, Data Entry, Data Cleaning, Data Analysis, Critical Thinking, Problem Solving, Attention to Detail, AI-Assisted Workflows, AI Tools, AI Career Skills, Research, Information Organization, Following Complex Instructions, Quality Checking &amp; Evaluation</div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-cat">
+          <h3>Communication</h3>
+          <div class="note">English — C2 level</div>
+        </div>
+        <div class="skill-list">Written Communication, Verbal Communication, Public Speaking, Client Communication, Professional Communication, Presentation, Collaboration, Remote Work, Adaptability, Independent Working</div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-cat">
+          <h3>Web development</h3>
+          <div class="note">Self-taught, project-based — currently building</div>
+        </div>
+        <div class="skill-list">HTML5, CSS3, JavaScript, Responsive Web Design, Frontend Development, Single-Page Website Development, UI/UX Implementation, Form Creation &amp; Validation, User Registration &amp; Sign-In Flows, Authentication Integration, Google OAuth Integration, Supabase Integration, Supabase Database Management, PostgreSQL &amp; Relational Database Concepts, JSON/JSONB Data Handling, REST API Concepts, API Integration, Backend Integration, Serverless &amp; Edge Functions, Deno &amp; TypeScript Fundamentals, Payment Integration Concepts, M-Pesa / Daraja API Integration, Git &amp; GitHub, Vercel Deployment, Environment Variable Configuration, Debugging &amp; Troubleshooting, Java <span style="font-style:italic;">(currently learning)</span></div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-cat">
+          <h3>Tools &amp; platforms</h3>
+        </div>
+        <div class="skill-list">Canva, Meta Business Suite, Google Workspace, Notion, Trello, Slack, CapCut, GitHub, Vercel, Supabase, Google Cloud Console, NetBeans, Claude, ChatGPT, Gemini, Runway, ALX eHub</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Services I <em>offer</em></h2>
+        <p style="color:var(--text-dim); margin-top:14px; font-size:15px;">Practical, results-focused support — whether you need someone to run your socials or keep your admin in order.</p>
+      </div>
+
+      <div class="service-row">
+        <div class="service-name"><h3>01 — Social Media Management</h3></div>
+        <div class="service-body"><p>I help brands build a consistent online presence through content planning, creation, scheduling, audience engagement, and platform-specific strategies.</p></div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-name"><h3>02 — Virtual &amp; Executive Assistance</h3></div>
+        <div class="service-body"><p>Reliable remote support for busy professionals and businesses, including email management, scheduling, research, data entry, organization, and day-to-day administrative tasks.</p></div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-name"><h3>03 — Web Design &amp; Development</h3></div>
+        <div class="service-body"><p>I create responsive, user-friendly websites using HTML, CSS, and JavaScript, with integrations for databases, authentication, APIs, and deployment.</p></div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-name"><h3>04 — Content Creation &amp; Design</h3></div>
+        <div class="service-body"><p>Social media graphics, promotional content, captions, short-form videos, and branded visual content designed to make your business stand out.</p></div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-name"><h3>05 — Data &amp; AI Services</h3></div>
+        <div class="service-body"><p>Data entry, data annotation, research, data analysis, quality evaluation, and AI-assisted workflows with strong attention to detail.</p></div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-name"><h3>06 — E-commerce Solutions</h3></div>
+        <div class="service-body"><p>I build and support online stores with product catalogs, shopping flows, customer accounts, orders, inventory concepts, and payment integrations.</p></div>
+      </div>
+
+      <div class="service-row">
+        <div class="service-name"><h3>07 — Digital Marketing &amp; Content Strategy</h3></div>
+        <div class="service-body"><p>I help businesses turn ideas into content strategies that attract the right audience, increase engagement, and create a stronger digital presence.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Experience</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">Remote · Freelance</div>
+          <h3>Social Media Manager — SB Safaris Kenya</h3>
+          <div class="tl-body">
+            <p>Managed social media content across Facebook, Instagram, TikTok, and YouTube.</p>
+            <img class="tl-logo" src="assets/logos/SB%20Safari%20logo.png" alt="SB Safaris Kenya logo">
+          </div>
+          <ul class="story-list">
+            <li>Created and adapted short-form video content for different platforms.</li>
+            <li>Developed captions, hashtags, and content strategies aimed at increasing reach and engagement.</li>
+            <li>Monitored audience and content performance and adjusted the strategy accordingly.</li>
+            <li>Created travel-focused promotional content aligned with the brand's identity.</li>
+            <li>Contributed to significant social media growth across the brand's platforms.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">2024</div>
+          <h3>Social Media Manager — AkiliNova</h3>
+          <div class="tl-body">
+            <p>Rebuilt an AI/tech company's Instagram from the ground up, restarting the account and establishing a consistent visual direction. Archived old posts, restarted the account from a low-follower starting point, and used content strategy to build visual consistency and growth.</p>
+            <img class="tl-logo" src="assets/logos/akili%20nova.png" alt="AkiliNova logo">
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Kenya · Freelance</div>
+          <h3>Social Media Manager — Briwnet Web</h3>
+          <div class="tl-body">
+            <p>Managed social media content for a web design and technology company.</p>
+            <img class="tl-logo" src="assets/logos/briwnet.png" alt="Briwnet logo">
+          </div>
+          <ul class="story-list">
+            <li>Created educational and promotional content around web development and digital technologies.</li>
+            <li>Produced short-form videos for TikTok and other social platforms.</li>
+            <li>Developed content around technologies including React, Flutter, Laravel, REST APIs, GraphQL, AWS, and GCP.</li>
+            <li>Helped grow the company's social media presence through consistent content production and platform-specific strategies.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Remote · Freelance</div>
+          <h3>Freelance Digital &amp; Social Media Specialist</h3>
+          <p>Worked with businesses and organizations to develop social media content and digital marketing materials.</p>
+          <ul class="story-list">
+            <li>Created social media posts, promotional graphics, captions, and short-form video content.</li>
+            <li>Assisted with content planning, audience engagement, and online brand positioning.</li>
+            <li>Adapted content to suit different audiences, industries, and social platforms.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Remote · Project-Based</div>
+          <h3>Web Developer — Personal &amp; Client Projects</h3>
+          <p>Designed and developed responsive websites using HTML, CSS, and JavaScript.</p>
+          <ul class="story-list">
+            <li>Built an e-commerce platform, KATAWA WEAR, with customer accounts, product management, orders, database integration, and payment functionality.</li>
+            <li>Worked with Supabase for authentication, database management, and backend functionality.</li>
+            <li>Integrated Vercel for deployment and explored M-Pesa Daraja payment integration.</li>
+            <li>Used GitHub for version control and project management.</li>
+            <li>Debugged and troubleshot frontend, backend, authentication, and deployment issues.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Remote · Freelance / Project-Based</div>
+          <h3>Virtual Assistant</h3>
+          <p>Provided administrative and digital support including research, data entry, organization, scheduling, and communication.</p>
+          <ul class="story-list">
+            <li>Worked with AI tools to improve productivity and workflow efficiency.</li>
+            <li>Demonstrated strong instruction-following, problem-solving, and critical-thinking abilities.</li>
+            <li>Supported digital projects requiring accuracy, organization, and independent work.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Education &amp; <em>certifications</em></h2>
+      </div>
+
+      <div class="cert-list">
+        <div class="cert-row"><span>Diploma in Computer Science</span><span>CDACC / KINAP · Expected 2027</span></div>
+        <div class="cert-row"><span>Data Analytics Graduate</span><span>ALX Africa</span></div>
+        <div class="cert-row"><span>AI Career Essentials</span><span>ALX Africa</span></div>
+        <div class="cert-row"><span>Virtual Assistant Certification</span><span>ALX Africa</span></div>
+        <div class="cert-row"><span>Technical Education — ICT</span><span>Diploma in Computer Science</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-copy">
+        <div class="eyebrow">Let’s Work Together</div>
+        <h2>Available for Freelance &amp; Remote Opportunities</h2>
+        <p class="availability">Have a project in mind, need help managing your digital presence, or looking for reliable remote support?</p>
+        <p class="lede">I’m available for remote, freelance, and contract opportunities in social media management, virtual assistance, web development, content creation, and data &amp; AI work.</p>
+        <div class="contact-info">
+          <a href="mailto:waitheratamara@gmail.com">waitheratamara@gmail.com</a>
+          <a href="mailto:k7tamara@gmail.com">k7tamara@gmail.com</a>
+          <a href="https://www.linkedin.com/in/tamara-kamali-98877430b" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/its.always.waithera/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@waitherakamali" target="_blank" rel="noopener">TikTok</a>
+        </div>
+
+        <div id="achievements" class="achievements">
+          <h3>A Few Things I’m Proud Of</h3>
+          <ul class="achievement-list">
+            <li><strong>ALX Data Analytics Graduate</strong></li>
+            <li><strong>ALX AI Career Essentials Graduate</strong></li>
+            <li><strong>ALX Virtual Assistant Certified</strong></li>
+            <li><a class="project-link" href="https://g-pi-rouge.vercel.app" target="_blank" rel="noopener"><img src="assets/logos/freshcart-logo.svg" alt="FreshCart logo"><span><strong>Built and deployed FreshCart, my own e-commerce web project</strong></span></a></li>
+            <li><a class="project-link" href="https://amara-wears.vercel.app/" target="_blank" rel="noopener"><img src="assets/logos/katawa-logo.svg" alt="KATAWA WEAR logo"><span><strong>Built and launched KATAWA WEAR, my clothing brand storefront</strong></span></a></li>
+            <li><strong>Managed social media accounts across TikTok, Instagram, Facebook &amp; YouTube</strong></li>
+            <li><strong>Contributed to measurable social-media audience growth through content strategy and consistent publishing</strong></li>
+            <li><strong>92nd percentile in Problem Solving on TestGorilla</strong></li>
+            <li><strong>94th percentile in Instructions Following on TestGorilla</strong></li>
+            <li><strong>79th percentile in Critical Thinking on TestGorilla</strong></li>
+            <li><strong>C2-level English assessment result</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <form action="https://formspree.io/f/xwlpewoq" method="POST">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+          </div>
+          <input type="text" name="subject" placeholder="Project type">
+          <textarea name="message" placeholder="Tell me about your project" required></textarea>
+          <button type="submit">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
