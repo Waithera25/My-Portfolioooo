@@ -198,6 +198,30 @@
   .service-name h3{font-size:22px; font-weight:400; color:var(--purple);}
   .service-body p{font-size:14.5px; color:var(--text-dim); max-width:52ch;}
   .service-body .tag{font-size:11.5px; color:var(--gold); font-style:italic; font-family:'Fraunces', serif; margin-bottom:8px; display:block;}
+  .projects-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .project-card{
+    border:1px solid var(--rule); background:rgba(255,255,255,0.12);
+    padding:18px; display:flex; flex-direction:column;
+  }
+  .project-image{
+    min-height:180px; display:flex; align-items:center; justify-content:center;
+    background:var(--bg-alt); border:1px dashed var(--rule);
+    color:var(--text-dim); font-size:13px; font-style:italic; margin-bottom:24px;
+  }
+  .project-card h3{font-size:24px; color:var(--purple-deep); margin-bottom:6px;}
+  .project-subtitle{font-size:13px; color:var(--gold); margin-bottom:14px;}
+  .project-card p{font-size:14.5px; color:var(--text-dim); margin-bottom:18px;}
+  .project-tags{display:flex; flex-wrap:wrap; gap:7px; list-style:none; margin-bottom:24px;}
+  .project-tags li{
+    border:1px solid var(--rule); border-radius:999px; padding:4px 9px;
+    color:var(--text-dim); font-size:11.5px; line-height:1.35;
+  }
+  .project-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:auto;}
+  .project-actions a{font-size:13px; padding:9px 13px; border:1px solid var(--rule); color:var(--purple-deep);}
+  .project-actions a:first-child{background:var(--purple); border-color:var(--purple); color:var(--bg);}
+  .project-actions a:hover{border-color:var(--gold); color:var(--purple-deep);}
+  .project-actions a:first-child:hover{background:var(--gold); border-color:var(--gold);}
+  @media(max-width:700px){ .projects-grid{grid-template-columns:1fr;} }
 
   /* PORTFOLIO */
   .work-grid{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--rule); border:1px solid var(--rule);}
@@ -329,6 +353,7 @@
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#certifications">Certifications</a>
       <a href="#achievements">Achievements</a>
@@ -484,6 +509,54 @@
     </div>
   </section>
 
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Things I've <em>built</em></h2>
+        <p style="color:var(--text-dim); margin-top:14px; font-size:15px;">Practical, working sites I've designed and built from scratch, from the front end to the database.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-image">Screenshot placeholder</div>
+          <h3>FreshCart</h3>
+          <div class="project-subtitle">Online grocery store</div>
+          <p>A full grocery shopping site with product browsing, a cart, customer accounts and a Supabase database behind it. Deployed live on Vercel.</p>
+          <ul class="project-tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Supabase</li>
+            <li>Vercel</li>
+          </ul>
+          <div class="project-actions">
+            <a href="https://g-pi-rouge.vercel.app" target="_blank" rel="noopener">View live site</a>
+            <a href="https://github.com/Waithera25" target="_blank" rel="noopener">Code on GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">Screenshot placeholder</div>
+          <h3>KATAWA WEAR</h3>
+          <div class="project-subtitle">Clothing brand storefront</div>
+          <p>An e-commerce storefront for a clothing brand with customer sign-in, product management, orders and payment flow. Built as a single-page site with a Supabase backend.</p>
+          <ul class="project-tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Supabase</li>
+            <li>Vercel</li>
+            <li>M-Pesa (Daraja)</li>
+          </ul>
+          <div class="project-actions">
+            <a href="https://amara-wears.vercel.app/" target="_blank" rel="noopener">View live site</a>
+            <a href="https://github.com/Waithera25" target="_blank" rel="noopener">Code on GitHub</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="experience">
     <div class="wrap">
       <div class="sec-head">
@@ -548,10 +621,7 @@
           <p>Designed and developed responsive websites using HTML, CSS, and JavaScript.</p>
           <ul class="story-list">
             <li>Built an e-commerce platform, KATAWA WEAR, with customer accounts, product management, orders, database integration, and payment functionality.</li>
-            <li>Worked with Supabase for authentication, database management, and backend functionality.</li>
-            <li>Integrated Vercel for deployment and explored M-Pesa Daraja payment integration.</li>
-            <li>Used GitHub for version control and project management.</li>
-            <li>Debugged and troubleshot frontend, backend, authentication, and deployment issues.</li>
+            <li>Built responsive websites with HTML, CSS, JavaScript, Supabase, Vercel, GitHub, and M-Pesa Daraja integrations.</li>
           </ul>
         </div>
 
@@ -606,8 +676,6 @@
             <li><strong>ALX Data Analytics Graduate</strong></li>
             <li><strong>ALX AI Career Essentials Graduate</strong></li>
             <li><strong>ALX Virtual Assistant Certified</strong></li>
-            <li><a class="project-link" href="https://g-pi-rouge.vercel.app" target="_blank" rel="noopener"><img src="assets/logos/freshcart-logo.svg" alt="FreshCart logo"><span><strong>Built and deployed FreshCart, my own e-commerce web project</strong></span></a></li>
-            <li><a class="project-link" href="https://amara-wears.vercel.app/" target="_blank" rel="noopener"><img src="assets/logos/katawa-logo.svg" alt="KATAWA WEAR logo"><span><strong>Built and launched KATAWA WEAR, my clothing brand storefront</strong></span></a></li>
             <li><strong>Managed social media accounts across TikTok, Instagram, Facebook &amp; YouTube</strong></li>
             <li><strong>Contributed to measurable social-media audience growth through content strategy and consistent publishing</strong></li>
             <li><strong>92nd percentile in Problem Solving on TestGorilla</strong></li>
