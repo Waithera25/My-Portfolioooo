@@ -1,0 +1,15 @@
+<svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FreshCart logo">
+  <rect width="220" height="80" rx="18" fill="#F4FAF5"/>
+  <g transform="translate(12 10)">
+    <rect x="0" y="10" width="42" height="28" rx="8" fill="#1F7A4B"/>
+    <path d="M8 10C8 5.6 11.6 2 16 2H25C29.4 2 33 5.6 33 10V15H8V10Z" fill="#2A9B62"/>
+    <path d="M14 12L21 18L28 12" stroke="#E9F7EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="14" cy="42" r="5" fill="#1F2E27"/>
+    <circle cx="32" cy="42" r="5" fill="#1F2E27"/>
+    <path d="M8 20H38L35 38H11L8 20Z" fill="#2A9B62"/>
+    <path d="M17 20C18 14 24 10 31 10" stroke="#DDEFE4" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+  <text x="68" y="44" font-size="26" font-weight="700" fill="#1F5B3F" font-family="Segoe UI, Arial, sans-serif">fresh</text>
+  <text x="154" y="44" font-size="26" font-weight="700" fill="#D0852A" font-family="Segoe UI, Arial, sans-serif">cart</text>
+  <path d="M70 52H196" stroke="#D0852A" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+</svg>
