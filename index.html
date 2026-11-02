@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tamara Kamali — Social Media Manager & Virtual Assistant</title>
-<meta name="description" content="Tamara Kamali — Social Media Manager, Virtual Assistant & Content Creator. Organic growth specialist, 70K to 560K followers.">
+<title>Tamara Kamali - Social Media Manager & Virtual Assistant</title>
+<meta name="description" content="Tamara Kamali - Social Media Manager, Virtual Assistant & Content Creator. Organic growth specialist, 70K to 560K followers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -162,19 +162,28 @@
   .fact span:last-child{text-align:right; max-width:60%; color:var(--purple-deep);}
   .cvlink{display:inline-block; margin-top:26px; font-size:14px; color:var(--purple); border-bottom:1px solid var(--purple); padding-bottom:2px;}
 
-  /* SKILLS — editorial index, not card grid */
-  .skill-row{
-    display:grid; grid-template-columns:280px 1fr; gap:36px;
-    padding:28px 0; border-top:1px solid var(--rule);
+  /* SKILLS */
+  .skill-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .skill-card{
+    border:1px solid var(--rule); padding:26px 22px 24px;
+    background:rgba(255,255,255,0.12);
   }
-  .skill-row:last-child{border-bottom:1px solid var(--rule);}
-  @media(max-width:700px){ .skill-row{grid-template-columns:1fr; gap:10px;} }
-  .skill-cat h3{font-size:20px; color:var(--purple); font-weight:400;}
-  .skill-cat .note{font-size:12.5px; color:var(--text-dim); margin-top:6px; font-style:italic;}
-  .skill-list{font-size:15px; color:var(--text-dim); line-height:2;}
-  .skill-list b{color:var(--purple-deep); font-weight:500;}
+  .skill-card h3{font-size:21px; color:var(--purple); font-weight:400;}
+  .skill-card .note{
+    font-size:12.5px; color:var(--text-dim); margin-top:7px;
+    font-style:italic; font-family:'Fraunces', serif;
+  }
+  .skill-pills,.tool-pills{display:flex; flex-wrap:wrap; gap:8px; list-style:none;}
+  .skill-pills{margin-top:22px;}
+  .skill-pills li,.tool-pills li{
+    border:1px solid var(--rule); border-radius:999px; padding:5px 10px;
+    color:var(--text-dim); font-size:12px; line-height:1.35;
+  }
+  .tools-row{margin-top:30px; padding-top:24px; border-top:1px solid var(--rule);}
+  .tools-row h3{font-size:18px; color:var(--purple); font-weight:400; margin-bottom:14px;}
+  @media(max-width:860px){ .skill-grid{grid-template-columns:1fr;} }
 
-  /* SERVICES — asymmetric list, not a uniform card grid */
+  /* SERVICES: asymmetric list, not a uniform card grid */
   .service-row{
     display:grid; grid-template-columns:1fr 1.6fr; gap:36px;
     padding:30px 0; border-top:1px solid var(--rule);
@@ -200,7 +209,7 @@
   .work-link{font-size:13.5px; color:var(--purple); border-bottom:1px solid transparent;}
   .work-link:hover{border-color:var(--purple);}
 
-  /* EXPERIENCE — legitimate timeline */
+  /* EXPERIENCE: legitimate timeline */
   .timeline{border-left:1px solid var(--rule); margin-left:6px;}
   .tl-item{position:relative; padding:0 0 46px 34px;}
   .tl-item::before{
@@ -335,8 +344,8 @@
   <div class="wrap hero">
     <div>
       <h1>Tamara <em>Kamali</em><br>Waithera</h1>
-      <div class="hero-role">Social Media Manager <span>/</span> Virtual Assistant <span>/</span> Content Creator <span>/</span> Admin &amp; Data Support</div>
-      <p class="lede">I help businesses grow real audiences and run smoother behind the scenes — from organic social strategy that's taken a page from 70K to 560K followers, to the day-to-day admin and content work that keeps a brand consistent.</p>
+      <div class="hero-role">Social Media Manager <span>/</span> Virtual Assistant</div>
+      <p class="lede">I help businesses grow real audiences and run smoother behind the scenes, from organic social strategy that's taken a page from 70K to 560K followers, to the day-to-day admin and content work that keeps a brand consistent.</p>
       <div class="cta-row">
         <a href="#experience" class="btn btn-solid">View My Work</a>
         <a href="#contact" class="btn btn-outline">Hire Me</a>
@@ -357,7 +366,7 @@
     <div class="wrap about-grid">
       <div>
         <h2 style="font-size:34px; margin-bottom:22px;">The person behind the <em>strategy</em></h2>
-        <p>I'm a Social Media Manager and Virtual Assistant who turns quiet pages into loud, engaged communities — without paid ads.</p>
+        <p>I'm a Social Media Manager and Virtual Assistant who turns quiet pages into loud, engaged communities without paid ads.</p>
         <p>I have a track record of driving real audience growth for lifestyle and travel brands. My biggest win so far: growing a client's Facebook page from around 70,000 to 560,000 followers through consistent, platform-tailored content strategy, no ad spend involved.</p>
         <p>I'm currently completing a Diploma in Computing and Informatics at Kiambu National Polytechnic, which gives me a technical grounding to go with the hands-on digital marketing work I do day to day. I'm adaptable, detail-oriented, and genuinely good at producing content that sounds like a real person, not a brand template.</p>
         <a href="Tamara_Kamali_CV.html" class="cvlink" download>Download CV</a>
@@ -371,7 +380,7 @@
     </div>
     <div class="wrap pull-quote">
       <p>I don't do content that sounds like everyone else's brand page.</p>
-      <span class="pq-cap">on why the 70K–560K growth didn't need a single ad</span>
+      <span class="pq-cap">on why the 70K to 560K growth didn't need a single ad</span>
     </div>
   </section>
 
@@ -379,62 +388,69 @@
     <div class="wrap">
       <div class="sec-head">
         <h2>Skills &amp; <em>toolkit</em></h2>
-        <p style="color:var(--text-dim); margin-top:14px; font-size:15px;">Built through client work, ALX training, self-directed projects, and constant hands-on learning.</p>
+        <p style="color:var(--text-dim); margin-top:14px; font-size:15px;">A focused toolkit for growing audiences, supporting clients, and building useful digital experiences.</p>
       </div>
 
-      <div class="skill-row">
-        <div class="skill-cat">
+      <div class="skill-grid">
+        <div class="skill-card">
           <h3>Social media &amp; growth</h3>
-          <div class="note">Strongest, evidence-backed</div>
+          <div class="note">Where the 70K to 560K came from</div>
+          <ul class="skill-pills">
+            <li>Social Media Strategy</li>
+            <li>Content Planning &amp; Scheduling</li>
+            <li>Short-Form Video</li>
+            <li>Captions &amp; Copywriting</li>
+            <li>Hashtag &amp; Audience Strategy</li>
+            <li>Analytics &amp; Performance Review</li>
+            <li>Facebook, Instagram &amp; TikTok Management</li>
+          </ul>
         </div>
-        <div class="skill-list">Social Media Management, Social Media Strategy, Content Planning, Content Creation, Content Scheduling, Social Media Copywriting, Caption Writing, Hashtag Strategy, Audience Targeting, Engagement Strategy, Short-Form Video Content, TikTok Management, Instagram Management, Facebook Management, YouTube Shorts, Social Media Growth Strategy, Viral Content Strategy, Social Media Analytics, Audience &amp; Performance Analysis, Brand Content Strategy, Cross-Platform Content Adaptation, Social Media Marketing</div>
-      </div>
-
-      <div class="skill-row">
-        <div class="skill-cat">
-          <h3>Virtual &amp; executive assistance</h3>
+        <div class="skill-card">
+          <h3>Virtual assistance &amp; data</h3>
           <div class="note">ALX-certified, client-tested</div>
+          <ul class="skill-pills">
+            <li>Email &amp; Calendar Management</li>
+            <li>Administrative Support</li>
+            <li>Online Research</li>
+            <li>Data Entry &amp; Cleaning</li>
+            <li>Data Analysis</li>
+            <li>Document Organization</li>
+            <li>Customer Support</li>
+            <li>AI-Assisted Workflows</li>
+          </ul>
         </div>
-        <div class="skill-list">Virtual Assistance, Executive Assistance, Email Management, Calendar Management, Scheduling, Administrative Support, Data Entry, Online Research, Document Management, Organization, Task Management, Customer Support, Remote Collaboration, Time Management, Attention to Detail, Following Instructions</div>
+        <div class="skill-card">
+          <h3>Design &amp; web</h3>
+          <div class="note">CDACC-certified in graphic design, building in code</div>
+          <ul class="skill-pills">
+            <li>Graphic Design &amp; Branding</li>
+            <li>Social Media Graphics</li>
+            <li>Basic Video Editing</li>
+            <li>HTML, CSS &amp; JavaScript</li>
+            <li>Responsive Websites</li>
+            <li>Supabase &amp; Authentication</li>
+            <li>Vercel Deployment</li>
+            <li>M-Pesa (Daraja) Integration</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="skill-row">
-        <div class="skill-cat">
-          <h3>Design &amp; content</h3>
-          <div class="note">CDACC-certified</div>
-        </div>
-        <div class="skill-list">Canva, Graphic Design, Typography, Color Theory, Layout &amp; Composition, Visual Hierarchy, Brand Identity Design, Logo Design, Print Design, Social Media Graphics, Promotional Posters, Branding, Visual Content Creation, Content Ideation, Video Content Creation, Basic Video Editing, Creative Direction, Copywriting, Storytelling, Visual Communication</div>
-      </div>
-
-      <div class="skill-row">
-        <div class="skill-cat">
-          <h3>Data &amp; AI-assisted work</h3>
-          <div class="note">ALX-certified</div>
-        </div>
-        <div class="skill-list">Data Analytics, Data Annotation, Data Entry, Data Cleaning, Data Analysis, Critical Thinking, Problem Solving, Attention to Detail, AI-Assisted Workflows, AI Tools, AI Career Skills, Research, Information Organization, Following Complex Instructions, Quality Checking &amp; Evaluation</div>
-      </div>
-
-      <div class="skill-row">
-        <div class="skill-cat">
-          <h3>Communication</h3>
-          <div class="note">English — C2 level</div>
-        </div>
-        <div class="skill-list">Written Communication, Verbal Communication, Public Speaking, Client Communication, Professional Communication, Presentation, Collaboration, Remote Work, Adaptability, Independent Working</div>
-      </div>
-
-      <div class="skill-row">
-        <div class="skill-cat">
-          <h3>Web development</h3>
-          <div class="note">Self-taught, project-based — currently building</div>
-        </div>
-        <div class="skill-list">HTML5, CSS3, JavaScript, Responsive Web Design, Frontend Development, Single-Page Website Development, UI/UX Implementation, Form Creation &amp; Validation, User Registration &amp; Sign-In Flows, Authentication Integration, Google OAuth Integration, Supabase Integration, Supabase Database Management, PostgreSQL &amp; Relational Database Concepts, JSON/JSONB Data Handling, REST API Concepts, API Integration, Backend Integration, Serverless &amp; Edge Functions, Deno &amp; TypeScript Fundamentals, Payment Integration Concepts, M-Pesa / Daraja API Integration, Git &amp; GitHub, Vercel Deployment, Environment Variable Configuration, Debugging &amp; Troubleshooting, Java <span style="font-style:italic;">(currently learning)</span></div>
-      </div>
-
-      <div class="skill-row">
-        <div class="skill-cat">
-          <h3>Tools &amp; platforms</h3>
-        </div>
-        <div class="skill-list">Canva, Meta Business Suite, Google Workspace, Notion, Trello, Slack, CapCut, GitHub, Vercel, Supabase, Google Cloud Console, NetBeans, Claude, ChatGPT, Gemini, Runway, ALX eHub</div>
+      <div class="tools-row">
+        <h3>Tools</h3>
+        <ul class="tool-pills">
+          <li>Canva</li>
+          <li>CapCut</li>
+          <li>Meta Business Suite</li>
+          <li>Google Workspace</li>
+          <li>Notion</li>
+          <li>Trello</li>
+          <li>Slack</li>
+          <li>GitHub</li>
+          <li>Supabase</li>
+          <li>Vercel</li>
+          <li>Claude</li>
+          <li>ChatGPT</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -443,42 +459,27 @@
     <div class="wrap">
       <div class="sec-head">
         <h2>Services I <em>offer</em></h2>
-        <p style="color:var(--text-dim); margin-top:14px; font-size:15px;">Practical, results-focused support — whether you need someone to run your socials or keep your admin in order.</p>
+        <p style="color:var(--text-dim); margin-top:14px; font-size:15px;">Practical, results-focused support, whether you need someone to run your socials or keep your admin in order.</p>
       </div>
 
       <div class="service-row">
-        <div class="service-name"><h3>01 — Social Media Management</h3></div>
-        <div class="service-body"><p>I help brands build a consistent online presence through content planning, creation, scheduling, audience engagement, and platform-specific strategies.</p></div>
+        <div class="service-name"><h3>01 - Social Media Management</h3></div>
+        <div class="service-body"><p>I run your socials so you don't have to. Content planning, captions, short-form video, scheduling and engagement, all tailored to each platform. This is how I took a page from 70K to 560K followers with zero ad spend.</p></div>
       </div>
 
       <div class="service-row">
-        <div class="service-name"><h3>02 — Virtual &amp; Executive Assistance</h3></div>
-        <div class="service-body"><p>Reliable remote support for busy professionals and businesses, including email management, scheduling, research, data entry, organization, and day-to-day administrative tasks.</p></div>
+        <div class="service-name"><h3>02 - Virtual &amp; Executive Assistance</h3></div>
+        <div class="service-body"><p>Reliable remote support for busy people. Inbox and calendar management, research, data entry and day-to-day admin, handled accurately so you can focus on the work that matters.</p></div>
       </div>
 
       <div class="service-row">
-        <div class="service-name"><h3>03 — Web Design &amp; Development</h3></div>
-        <div class="service-body"><p>I create responsive, user-friendly websites using HTML, CSS, and JavaScript, with integrations for databases, authentication, APIs, and deployment.</p></div>
+        <div class="service-name"><h3>03 - Content Creation &amp; Design</h3></div>
+        <div class="service-body"><p>Graphics, posters, short videos and branded visuals that look like your business, not a template. Backed by my CDACC graphic design certification.</p></div>
       </div>
 
       <div class="service-row">
-        <div class="service-name"><h3>04 — Content Creation &amp; Design</h3></div>
-        <div class="service-body"><p>Social media graphics, promotional content, captions, short-form videos, and branded visual content designed to make your business stand out.</p></div>
-      </div>
-
-      <div class="service-row">
-        <div class="service-name"><h3>05 — Data &amp; AI Services</h3></div>
-        <div class="service-body"><p>Data entry, data annotation, research, data analysis, quality evaluation, and AI-assisted workflows with strong attention to detail.</p></div>
-      </div>
-
-      <div class="service-row">
-        <div class="service-name"><h3>06 — E-commerce Solutions</h3></div>
-        <div class="service-body"><p>I build and support online stores with product catalogs, shopping flows, customer accounts, orders, inventory concepts, and payment integrations.</p></div>
-      </div>
-
-      <div class="service-row">
-        <div class="service-name"><h3>07 — Digital Marketing &amp; Content Strategy</h3></div>
-        <div class="service-body"><p>I help businesses turn ideas into content strategies that attract the right audience, increase engagement, and create a stronger digital presence.</p></div>
+        <div class="service-name"><h3>04 - Web Design &amp; Development</h3></div>
+        <div class="service-body"><p>Clean, responsive websites and online stores built with HTML, CSS and JavaScript, with sign-in, databases and payments (including M-Pesa) connected where you need them.</p></div>
       </div>
     </div>
   </section>
@@ -492,7 +493,7 @@
       <div class="timeline">
         <div class="tl-item">
           <div class="tl-date">Remote · Freelance</div>
-          <h3>Social Media Manager — SB Safaris Kenya</h3>
+          <h3>Social Media Manager - SB Safaris Kenya</h3>
           <div class="tl-body">
             <p>Managed social media content across Facebook, Instagram, TikTok, and YouTube.</p>
             <img class="tl-logo" src="assets/logos/SB%20Safari%20logo.png" alt="SB Safaris Kenya logo">
@@ -508,7 +509,7 @@
 
         <div class="tl-item">
           <div class="tl-date">2024</div>
-          <h3>Social Media Manager — AkiliNova</h3>
+          <h3>Social Media Manager - AkiliNova</h3>
           <div class="tl-body">
             <p>Rebuilt an AI/tech company's Instagram from the ground up, restarting the account and establishing a consistent visual direction. Archived old posts, restarted the account from a low-follower starting point, and used content strategy to build visual consistency and growth.</p>
             <img class="tl-logo" src="assets/logos/akili%20nova.png" alt="AkiliNova logo">
@@ -517,7 +518,7 @@
 
         <div class="tl-item">
           <div class="tl-date">Kenya · Freelance</div>
-          <h3>Social Media Manager — Briwnet Web</h3>
+          <h3>Social Media Manager - Briwnet Web</h3>
           <div class="tl-body">
             <p>Managed social media content for a web design and technology company.</p>
             <img class="tl-logo" src="assets/logos/briwnet.png" alt="Briwnet logo">
@@ -543,7 +544,7 @@
 
         <div class="tl-item">
           <div class="tl-date">Remote · Project-Based</div>
-          <h3>Web Developer — Personal &amp; Client Projects</h3>
+          <h3>Web Developer - Personal &amp; Client Projects</h3>
           <p>Designed and developed responsive websites using HTML, CSS, and JavaScript.</p>
           <ul class="story-list">
             <li>Built an e-commerce platform, KATAWA WEAR, with customer accounts, product management, orders, database integration, and payment functionality.</li>
@@ -579,7 +580,7 @@
         <div class="cert-row"><span>Data Analytics Graduate</span><span>ALX Africa</span></div>
         <div class="cert-row"><span>AI Career Essentials</span><span>ALX Africa</span></div>
         <div class="cert-row"><span>Virtual Assistant Certification</span><span>ALX Africa</span></div>
-        <div class="cert-row"><span>Technical Education — ICT</span><span>Diploma in Computer Science</span></div>
+        <div class="cert-row"><span>Technical Education - ICT</span><span>Diploma in Computer Science</span></div>
       </div>
     </div>
   </section>
